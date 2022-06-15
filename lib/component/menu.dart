@@ -1,9 +1,9 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class Menu extends SpriteComponent with HasGameRef{
+class Menu extends PositionComponent with HasGameRef{
 
-  Menu({required Sprite sprite }) : super(sprite: sprite, size: Vector2(0, 0));
+  Menu() : super(size: Vector2(0, 0));
 
   @override
   Future<void>? onLoad() async{

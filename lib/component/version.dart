@@ -1,11 +1,9 @@
-import 'dart:math';
-
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class Version extends SpriteComponent with HasGameRef{
+class Version extends PositionComponent with HasGameRef{
 
-  Version({required Sprite sprite }) : super(sprite: sprite, size: Vector2(0, 0));
+  Version() : super(size: Vector2(0, 0));
 
   @override
   Future<void>? onLoad() async{

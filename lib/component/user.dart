@@ -1,9 +1,9 @@
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class User extends SpriteComponent {
+class User extends PositionComponent {
 
-  User({required Sprite sprite }) : super(sprite: sprite, size: Vector2(0, 0));
+  User() : super(size: Vector2(0, 0));
 
   late TextComponent name;
 

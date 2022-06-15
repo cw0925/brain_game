@@ -1,11 +1,9 @@
-import 'dart:math';
-
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 
-class Brain extends SpriteComponent with HasGameRef{
+class Brain extends PositionComponent with HasGameRef{
 
-  Brain({required Sprite sprite }) : super(sprite: sprite, size: Vector2(0, 0));
+  Brain() : super(size: Vector2(0, 0));
 
   @override
   Future<void>? onLoad() async{
