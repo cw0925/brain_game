@@ -1,13 +1,14 @@
+import 'package:flame/collisions.dart';
 import 'package:flame/components.dart';
 import 'package:flutter/material.dart';
 import 'package:flame/input.dart';
 
-class Mode extends PositionComponent with HasGameRef,Tappable{
+class Mode extends PositionComponent with HasGameRef,Tappable {
 
-  Mode() : super();
+  Mode() : super(size: Vector2(100, 100));
 
   @override
-  Future<void>? onLoad() async{
+  Future<void>? onLoad() async {
     // TODO: implement onLoad
 
     SpriteComponent bgIcon = SpriteComponent(sprite: await Sprite.load('icon_expertmode.png'),size: Vector2((gameRef.canvasSize.x - 50) / 4 , (gameRef.canvasSize.x - 50) / 4));
@@ -56,13 +57,18 @@ class Mode extends PositionComponent with HasGameRef,Tappable{
     star2.position.y = 70;
     add(star2);
 
-  }
+    add(RectangleHitbox()..debugMode = true);
 
+  }
+  
+  
   @override
   bool onTapDown(TapDownInfo info){
     print("tap up");
     return true;
   }
+  
+  
 
 }
 
